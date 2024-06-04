@@ -1,10 +1,11 @@
 import json
 import boto3
 
-sqs_client = boto3.client('sqs')
-sqs_queue_url = "https://sqs.us-east-1.amazonaws.com/058264373160/movie-recommendation-queue"
 
 def lambda_handler(event, context):
+
+    sqs_client = boto3.client('sqs')
+    sqs_queue_url = "https://sqs.us-east-1.amazonaws.com/058264373160/movie-recommendation-queue"
 
     response = sqs_client.receive_message(
         QueueUrl = sqs_queue_url,
