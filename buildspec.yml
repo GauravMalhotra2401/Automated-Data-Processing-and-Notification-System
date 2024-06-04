@@ -30,7 +30,7 @@ phases:
       - echo "Updating producer Lambda function via S3..."
       - aws lambda update-function-code --function-name producer-movie-lambda-function --s3-bucket movie-data-s3-bucket --s3-key producer_deployment_package.zip 
       - echo "Updating consumer Lambda function via S3..."
-      - aws lambda update-function-code --function-name consumer-movie-lambda-function --s3-bucket movie-data-s3-bucket --s3-key consumer_deployment_package.zip 
+      - aws lambda update-function-code --function-name consumer-mv-lambda-function --s3-bucket movie-data-s3-bucket --s3-key consumer_deployment_package.zip 
       - echo "Deployment complete!"
 
 artifacts:
