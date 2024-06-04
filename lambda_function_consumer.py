@@ -15,7 +15,7 @@ def lambda_handler(event, context):
 
     if 'Messages' in response:
         for message in event['Records']:
-            body = json.loads(message['Body'])
+            body = json.loads(message['body'])
 
             print(f"Received Movie data : {body}")
 
